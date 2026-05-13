@@ -1,0 +1,161 @@
+:root {
+    --bg-color: #0f1113;
+    --card-bg: #1c1f22;
+    --sidebar-bg: #0a0c0d;
+    --text-main: #9ea3ac;
+    --text-bright: #ffffff;
+    --neon-rose: #f472b6;
+    --gray-border: #2d3339;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cv-container {
+    width: 100%;
+    max-width: 950px;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    padding: 50px 30px;
+    border-right: 1px solid var(--gray-border);
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3.5px solid var(--neon-rose);
+    overflow: hidden;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.15);
+}
+
+.profile-img img { width: 100%; height: 100%; object-fit: cover; }
+
+h2 {
+    color: var(--neon-rose);
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--gray-border);
+    padding-bottom: 8px;
+    margin-top: 40px;
+}
+
+.contact-info p { font-size: 0.85rem; margin: 12px 0; color: var(--text-main); }
+
+.skills-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+
+.skill-tag {
+    background: rgba(244, 114, 182, 0.08);
+    color: var(--neon-rose);
+    border: 1px solid rgba(244, 114, 182, 0.3);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* --- QR SECTION --- */
+.qr-section { margin-top: auto; padding-top: 80px; text-align: center; }
+
+.qr-code {
+    width: 110px;
+    height: 110px;
+    background: white;
+    padding: 8px;
+    border-radius: 14px;
+    border: 2px solid var(--neon-rose);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+/* L'effet au survol : juste un zoom léger et fluide */
+.qr-code:hover {
+    transform: scale(1.06); /* Agrandissement léger */
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4); /* Halo rose plus diffus */
+}
+.qr-description { display: flex; align-items: center; justify-content: center; margin-top: 15px; }
+
+.qr-text {
+    font-family: 'Comfortaa', cursive;
+    color: var(--neon-rose);
+    font-size: 0.8rem;
+    font-weight: 700;
+    transform: rotate(-3deg);
+    line-height: 1.2;
+}
+
+.coeur-main { width: 32px; margin-left: 8px; filter: drop-shadow(0 0 5px var(--neon-rose)); }
+
+/* --- MAIN CONTENT --- */
+.main-content { padding: 60px; }
+
+.main-header h1 {
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin: 0;
+    color: var(--text-bright);
+    letter-spacing: -1px;
+}
+
+.main-header h1 .last-name { font-weight: 800; }
+
+.subtitle {
+    color: var(--neon-rose);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.section-title {
+    color: var(--text-bright);
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--gray-border);
+    margin: 50px 0 25px 0;
+    padding-bottom: 10px;
+}
+
+.project-item h3 { color: var(--text-bright); font-size: 1.1rem; margin-bottom: 5px; }
+.project-item p { font-size: 0.95rem; margin-bottom: 20px; }
+
+.exp-card { margin-bottom: 30px; }
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+
+.job-title { color: var(--text-bright); font-weight: 700; font-size: 1.1rem; }
+
+.exp-date { color: #64748b; font-size: 0.85rem; font-weight: 600; }
+
+.company { color: var(--neon-rose); font-weight: 600; font-size: 0.95rem; }
+
+.exp-desc { font-size: 0.9rem; margin-top: 8px; opacity: 0.8; }
