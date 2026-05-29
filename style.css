@@ -1,11 +1,11 @@
 :root {
-    --bg-color: #0f1113;
-    --card-bg: #1c1f22;
-    --sidebar-bg: #0a0c0d;
-    --text-main: #9ea3ac;
-    --text-bright: #ffffff;
-    --neon-rose: #f472b6;
-    --gray-border: #2d3339;
+    --bg-color: #fcfbf9;
+    --card-bg: #ffffff;
+    --sidebar-bg: #f4f2ef;
+    --text-main: #332d2a;
+    --text-muted: #8a827d;
+    --accent: #c87941;
+    --border: #e0dcd9;
 }
 
 * { box-sizing: border-box; }
@@ -18,8 +18,6 @@ body {
     padding: 40px 20px;
     display: flex;
     justify-content: center;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
 }
 
 .cv-container {
@@ -30,107 +28,120 @@ body {
     display: grid;
     grid-template-columns: 300px 1fr;
     overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 /* --- SIDEBAR --- */
 .sidebar {
     background-color: var(--sidebar-bg);
     padding: 50px 30px;
-    border-right: 1px solid var(--gray-border);
+    border-right: 1px solid var(--border);
     display: flex;
     flex-direction: column;
 }
 
 .profile-img {
     width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3.5px solid var(--neon-rose);
-    overflow: hidden;
+    height: 180px;
+    border-radius: 20px;
+    border: 3px solid var(--accent);
     margin: 0 auto 30px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.profile-img img { width: 100%; height: 100%; object-fit: cover; }
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 h2 {
-    color: var(--neon-rose);
-    font-size: 0.85rem;
+    color: var(--accent);
+    font-size: 0.75rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-bottom: 1px solid var(--gray-border);
+    border-bottom: 1px solid var(--border);
     padding-bottom: 8px;
     margin-top: 40px;
 }
 
-.contact-info p { font-size: 0.85rem; margin: 12px 0; color: var(--text-main); }
+.contact-info p { font-size: 0.9rem; margin: 12px 0; color: var(--text-main); }
 
 /* --- QR SECTION --- */
-.qr-section { margin-top: auto; padding-top: 80px; text-align: center; }
-.qr-code {
-    width: 110px; height: 110px; background: white; padding: 8px;
-    border-radius: 14px; border: 2px solid var(--neon-rose);
+.qr-section {
+    margin-top: auto;
+    padding-top: 40px;
+    text-align: center;
 }
+
+.qr-code {
+    width: 110px;
+    border: 2px solid var(--accent);
+    padding: 5px;
+    border-radius: 10px;
+}
+
 .qr-text {
-    font-family: 'Comfortaa', cursive; color: var(--neon-rose);
-    font-size: 0.8rem; font-weight: 700; transform: rotate(-3deg);
-    margin-top: 15px; display: block;
+    font-family: 'Comfortaa', cursive;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 15px;
+    display: block;
 }
 
 /* --- MAIN CONTENT --- */
 .main-content { padding: 60px; }
 
 .main-header h1 {
-    font-size: 2.8rem; font-weight: 300; margin: 0;
-    color: var(--text-bright); letter-spacing: -1px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text-main);
 }
-.main-header h1 .last-name { font-weight: 800; }
 
-/* --- TITRES --- */
-.status {
-    color: var(--text-bright);
-    font-size: 1.2rem; /* Légèrement réduit */
-    font-weight: 500;
-    margin: 10px 0 5px 0;
-}
+.last-name { font-weight: 300; }
+
+.status { color: var(--text-muted); font-size: 1rem; margin: 5px 0; }
 
 .role {
-    color: var(--text-bright);
-    font-size: 1.6rem; /* Réduit pour ne pas dominer tout l'écran */
-    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.4rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px; /* Très léger espacement pour la lisibilité */
-    margin: 0;
+    margin-top: 10px;
 }
 
-.specialty {
-    color: var(--neon-rose);
-    font-size: 1.2rem; /* Plus harmonieux avec le titre */
-    font-weight: 500;  /* Légèrement plus épais pour mieux tenir */
-    text-transform: uppercase;
-    letter-spacing: 1.5px; /* Espacement réduit pour éviter l'effet "aéré" excessif */
-    margin: 2px 0 25px 0;
-}
+.specialty { font-size: 1.2rem; margin-bottom: 25px; }
 
-.accroche { line-height: 1.6; font-size: 1rem; margin-top: 20px; color: var(--text-main); }
+.accroche { line-height: 1.6; font-size: 1rem; color: var(--text-main); margin-bottom: 30px; }
 
 .section-title {
-    color: var(--text-bright); font-size: 1.3rem; font-weight: 700;
-    border-bottom: 2px solid var(--gray-border); margin: 50px 0 25px 0; padding-bottom: 10px;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent);
+    margin: 40px 0 20px 0;
+    padding-bottom: 5px;
+    display: inline-block;
 }
 
-/* --- EXPÉRIENCES --- */
+/* --- EXPÉRIENCES & FORMATION --- */
 .exp-card { margin-bottom: 30px; }
-.exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
-.job-title { color: var(--text-bright); font-weight: 700; font-size: 1.1rem; }
-.exp-date { color: #64748b; font-size: 0.85rem; font-weight: 600; }
-.company { color: var(--neon-rose); font-weight: 600; font-size: 0.95rem; }
-.exp-desc { font-size: 0.9rem; margin-top: 8px; color: var(--text-main); }
+.exp-header { display: flex; justify-content: space-between; align-items: baseline; }
+.job-title { font-weight: 700; color: var(--text-main); }
+.company { color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+.exp-date { color: var(--text-muted); font-size: 0.85rem; font-weight: 600; }
+.exp-desc { font-size: 0.9rem; margin-top: 5px; color: var(--text-main); }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 850px) {
     .cv-container { grid-template-columns: 1fr; }
-    .main-content { padding: 40px 20px; }
-    .main-header { text-align: center; }
+    .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
 }
