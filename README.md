@@ -5,7 +5,6 @@ CV interactif et portfolio de mes projets de développement web.
 ## 🛠 Technologies utilisées
 - HTML5
 - CSS3
-- JavaScript
 
 ## 🔗 Voir mon CV en ligne
 https://devbylilyane.github.io/cv/
