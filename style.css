@@ -41,6 +41,20 @@ body {
     flex-direction: column;
 }
 
+/* Amélioration de l'espacement dans la Sidebar */
+.sidebar-section {
+    margin-bottom: 20px;
+}
+
+.sidebar-section h2 {
+    margin-top: 25px; /* Réduit un peu l'espace pour ne pas trop descendre */
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 8px 0; /* Un peu moins serré que 12px pour laisser respirer */
+}
+
 .profile-img {
     width: 150px;
     height: 180px;
