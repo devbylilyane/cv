@@ -46,8 +46,8 @@ body {
     margin-bottom: 20px;
 }
 
-.sidebar-section h2 {
-    margin-top: 25px; /* Réduit un peu l'espace pour ne pas trop descendre */
+.sidebar .sidebar-section h2 {
+    margin-top: 15px; /* Ajuste cette valeur selon ton goût */
     margin-bottom: 10px;
 }
 
