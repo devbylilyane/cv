@@ -160,24 +160,3 @@ h2 {
     .cv-container { grid-template-columns: 1fr; }
     .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
 }
-
-/* --- EFFET FILIGRANE CODE SIDEBAR --- */
-.sidebar {
-    position: relative;
-    z-index: 1; /* Assure que tout le contenu est au-dessus */
-}
-
-.sidebar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('photocode.png'); /* <--- METS LE NOM DE TON FICHIER ICI */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.05; /* 5% d'opacité pour que ce soit très discret */
-    z-index: -1; /* Place l'image derrière le contenu */
-    pointer-events: none; /* Empêche l'image de gêner les clics */
-}
