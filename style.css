@@ -83,7 +83,7 @@ h2 {
     letter-spacing: 2px;
     border-bottom: 1px solid var(--border);
     padding-bottom: 8px;
-    margin-top: 40px;
+    margin-top: 20px; /* Passe de 40px à 20px */
 }
 
 .contact-info p { font-size: 0.9rem; margin: 12px 0; color: var(--text-main); }
